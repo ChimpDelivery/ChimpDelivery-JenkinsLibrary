@@ -19,7 +19,7 @@ def call()
                     -nographics \
                     -stackTraceLogType Full \
                     -silent-crashes
-
-                    echo "[Jenkins] Unity Set Product Settings stage completed!"
+                    
+        echo "[Jenkins] Unity Set Product Settings stage completed!"
     '''
 }
