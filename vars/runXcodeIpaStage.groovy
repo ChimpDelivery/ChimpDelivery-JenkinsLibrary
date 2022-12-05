@@ -1,5 +1,7 @@
 def call()
 {
+    env.EXPORTLIST = "${WORKSPACE}/Builds/exportOptions.plist"
+    
     sh '''
         echo "[Jenkins] Create ipa starting..."
 
