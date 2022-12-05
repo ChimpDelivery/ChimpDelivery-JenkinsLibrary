@@ -5,5 +5,5 @@ def call()
                 link: env.BUILD_URL,
                 result: currentBuild.currentResult,
                 title: "Job: ${JOB_NAME}",
-                webhookUrl: env.DISCORD_WEBHOOK_URL
+                webhookURL: env.DISCORD_WEBHOOK_URL
 }
