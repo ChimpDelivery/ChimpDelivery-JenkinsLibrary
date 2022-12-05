@@ -1,4 +1,5 @@
-def call() {
+def call() 
+{
     currentBuild.result = 'ABORTED'
     error("Job parameterized!")
 }
