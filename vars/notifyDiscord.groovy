@@ -5,5 +5,5 @@ def call(Map config = [:])
                 link: env.BUILD_URL,
                 result: currentBuild.currentResult,
                 title: "Job: ${JOB_NAME}",
-                webhookURL: ${config.webhookUrl}
+                webhookUrl: ${config.webhookUrl}
 }
