@@ -15,7 +15,6 @@ def call()
                     -appId $APP_ID \
                     -buildVersion $STORE_BUILD_VERSION \
                     -bundleVersion $STORE_VERSION \
-                    -profileUuid $DASHBOARD_PROFILE_UUID \
                     -nographics \
                     -stackTraceLogType Full \
                     -silent-crashes
