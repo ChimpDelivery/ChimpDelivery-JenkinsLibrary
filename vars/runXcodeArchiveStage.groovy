@@ -13,7 +13,7 @@ def call()
             -scheme Unity-iPhone \
             -sdk iphoneos \
             -configuration Release \
-            PROVISIONING_PROFILE_SPECIFIER="$DASHBOARD_PROFILE_NAME" \
+            PROVISIONING_PROFILE_SPECIFIER="$DASHBOARD_PROFILE_UUID" \
             DEVELOPMENT_TEAM="$DASHBOARD_TEAM_ID" \
             -UseModernBuildSystem=YES \
             archive -archivePath '../ios-build/BuildArchieve.xcarchive' \
