@@ -10,8 +10,6 @@ def call()
     // clear project related artifacts
     if (params.INSTALL_SDK == true)
     {
-        // todo: gvhprojectsettings
-        
         sh '''
             git checkout "${WORKSPACE}/Packages/manifest.json"
             git checkout "${WORKSPACE}/Packages/packages-lock.json"
