@@ -16,7 +16,6 @@ def call()
             -accept-apiupdate \
             -stackTraceLogType Full \
             -silent-crashes
-            -quit
 
             echo "[Jenkins] Unity Backend Packages integration finished..."
     '''
