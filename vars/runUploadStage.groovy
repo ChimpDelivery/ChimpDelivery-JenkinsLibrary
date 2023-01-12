@@ -11,8 +11,8 @@ def call()
                 /usr/bin/xcrun altool --upload-app \
                     --type ios \
                     --file ***.ipa \
-                    --username $TESTFLIGHT_USERNAME \
-                    --password $TESTFLIGHT_PASSWORD \
+                    --username $TESTFLIGHT_USER_ACCOUNT_USR \
+                    --password $TESTFLIGHT_USER_ACCOUNT_PSW \
                     --show-progress \
                     --verbose
 
