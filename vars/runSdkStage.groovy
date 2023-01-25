@@ -9,8 +9,8 @@ def call()
             -username $UNITY_USERNAME \
             -password $UNITY_PASSWORD \
             -serial $UNITY_SERIAL \
-            -apiKey $BACKEND_API_KEY \
-            -apiUrl $BACKEND_API_URL \
+            -apiUrl $DASHBOARD_ACCOUNT_USR \
+            -apiKey $DASHBOARD_ACCOUNT_PSW \
             -appId $APP_ID \
             -nographics \
             -accept-apiupdate \
