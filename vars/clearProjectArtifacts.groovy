@@ -5,6 +5,10 @@ def call()
         if [ -d "${WORKSPACE}/Builds" ]; then
             rm -rf "${WORKSPACE}/Builds"
         fi
+        
+        if [ -d "${WORKSPACE}/Library/Il2cppBuildCache" ]; then
+            rm -rf "${WORKSPACE}/Library/Il2cppBuildCache"
+        fi
     '''
 
     // clear project related artifacts
