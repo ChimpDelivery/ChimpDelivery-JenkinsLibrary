@@ -9,6 +9,11 @@ def call()
         if [ -d "${WORKSPACE}/Library/Il2cppBuildCache" ]; then
             rm -rf "${WORKSPACE}/Library/Il2cppBuildCache"
         fi
+        
+        # Clears the Scriptable Build Pipeline cache. Reference: https://docs.unity3d.com/Packages/com.unity.addressables@1.21/manual/ContinuousIntegration.html
+        if [ -d "${WORKSPACE}/Library/BuildCache" ]; then
+            rm -rf "${WORKSPACE}/Library/BuildCache"
+        fi
     '''
 
     // clear project related artifacts
