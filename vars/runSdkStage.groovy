@@ -14,7 +14,7 @@ def call()
             -appId $APP_ID \
             -nographics \
             -accept-apiupdate \
-            -stackTraceLogType Full \
+            -stackTraceLogType ScriptOnly \
             -silent-crashes
 
             echo "[Jenkins] Unity Backend Packages integration finished..."
