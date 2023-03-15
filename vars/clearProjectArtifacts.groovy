@@ -1,6 +1,5 @@
 def call() 
 {
-    // clear build related artifacts
     sh '''
         if [ -d "${WORKSPACE}/Builds" ]; then
             rm -rf "${WORKSPACE}/Builds"
@@ -10,19 +9,18 @@ def call()
             rm -rf "${WORKSPACE}/Library/Il2cppBuildCache"
         fi
         
-        # Clears the Scriptable Build Pipeline cache. Reference: https://docs.unity3d.com/Packages/com.unity.addressables@1.21/manual/ContinuousIntegration.html
+        # Clear the Scriptable Build Pipeline cache. Reference: https://docs.unity3d.com/Packages/com.unity.addressables@1.21/manual/ContinuousIntegration.html
         if [ -d "${WORKSPACE}/Library/BuildCache" ]; then
             rm -rf "${WORKSPACE}/Library/BuildCache"
         fi
+        
+        # Clear Unity3D related artifacts from project history
+        git add . && git stash && git stash drop
     '''
 
-    // clear project related artifacts
     if (params.INSTALL_SDK == true)
     {
         sh '''
-            git checkout "${WORKSPACE}/Packages/manifest.json"
-            git checkout "${WORKSPACE}/Packages/packages-lock.json"
-
             if [ -d "${WORKSPACE}/Assets/FacebookSDK" ]; then
                 rm -rf "${WORKSPACE}/Assets/FacebookSDK"
             fi
