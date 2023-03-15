@@ -16,7 +16,7 @@ def call()
                     -buildVersion $STORE_BUILD_VERSION \
                     -bundleVersion $STORE_VERSION \
                     -nographics \
-                    -stackTraceLogType Full \
+                    -stackTraceLogType ScriptOnly \
                     -silent-crashes
                     
         echo "[Jenkins] Unity Set Product Settings stage completed!"
