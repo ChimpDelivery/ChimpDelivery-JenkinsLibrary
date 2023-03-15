@@ -22,7 +22,7 @@ def call()
             -keyStorePass $ANDROID_KEYSTORE_PASS \
             -nographics \
             -accept-apiupdate \
-            -stackTraceLogType Full \
+            -stackTraceLogType ScriptOnly \
             -silent-crashes
 
             echo "[Jenkins] Unity Build finished..."
