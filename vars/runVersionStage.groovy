@@ -1,8 +1,12 @@
 def call() 
 {
     crossShell """
-        echo "[Jenkins] Unity Set Product Settings stage starting..."
-        echo "[Jenkins] BuildNumber: $BUILD_NUMBER, AppVersion: $STORE_BUILD_VERSION, CustomVersion: $STORE_CUSTOM_BUNDLE_VERSION, CustomBundleVersion: $STORE_BUNDLE_VERSION"
+        echo '[Jenkins] Unity Set Product Settings stage starting...'
+        
+        echo '[Jenkins] BuildNumber: $BUILD_NUMBER \
+                        AppVersion: $STORE_BUILD_VERSION \
+                        CustomVersion: $STORE_CUSTOM_BUNDLE_VERSION \
+                        CustomBundleVersion: $STORE_BUNDLE_VERSION'
 
         "${UNITY_PATH}" -batchmode \
                     -projectPath $WORKSPACE \
@@ -19,6 +23,6 @@ def call()
                     -stackTraceLogType ScriptOnly \
                     -silent-crashes
                     
-        echo "[Jenkins] Unity Set Product Settings stage completed!"
+        echo '[Jenkins] Unity Set Product Settings stage completed!'
     """        
 }
