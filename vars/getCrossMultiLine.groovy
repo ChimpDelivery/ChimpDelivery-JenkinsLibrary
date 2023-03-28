@@ -1,4 +1,9 @@
 def call() 
 {
-    return (isUnix()) ? '\' : '^'
+    if (isUnix())
+    {
+        return "\"
+    }
+    
+    return "^"
 }
