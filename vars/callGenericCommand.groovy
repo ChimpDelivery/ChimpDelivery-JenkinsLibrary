@@ -3,15 +3,15 @@ def call(command)
     switch (env.OS)
     {
         case 'WIN':
-            bat '''command'''
+            bat command
         break;
         
         case 'MAC':
-            sh '''command'''
+            sh command
         break;
         
         case 'UBUNTU':
-            sh '''command'''
+            sh command
         break;
     }
 }
