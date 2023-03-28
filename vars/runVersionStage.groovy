@@ -1,6 +1,6 @@
 def call() 
 {
-    crossShell(script: """echo "[Jenkins] Unity Set Product Settings stage starting..."""")
+    crossShell(script: """echo "[Jenkins] Unity Set Product Settings stage starting...""")
     crossShell(script: """echo "[Jenkins] BuildNumber: "$BUILD_NUMBER", AppVersion: "$STORE_BUILD_VERSION", CustomVersion: "$STORE_CUSTOM_BUNDLE_VERSION", CustomBundleVersion: "$STORE_BUNDLE_VERSION"""")           
     
     sh '''
