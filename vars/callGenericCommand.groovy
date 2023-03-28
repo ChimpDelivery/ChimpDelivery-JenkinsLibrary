@@ -3,15 +3,15 @@ def call(command)
     switch (env.OS)
     {
         case 'WIN':
-            bat command
+            return bat(returnStdout: true, script: "${command}").trim()
         break;
         
         case 'MAC':
-            sh command
+            return sh(returnStdout: true, script: "${command}").trim()
         break;
         
         case 'UBUNTU':
-            sh command
+            return sh(returnStdout: true, script: "${command}").trim()
         break;
     }
 }
