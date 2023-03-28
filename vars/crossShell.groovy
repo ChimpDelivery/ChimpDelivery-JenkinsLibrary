@@ -3,13 +3,13 @@ def call(Map config = [:])
     switch (env.OS)
     {
         case 'WIN':
-            bat(script: config.script)
+            bat """${config.script}"""
         break;
         case 'MAC':
-            sh(script: config.script)
+            sh """${config.script}"""
         break;
         default:
-            sh(script: config.script)
+            sh """${config.script}"""
         break;
     }
 }
