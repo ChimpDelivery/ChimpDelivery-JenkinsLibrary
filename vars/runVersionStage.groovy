@@ -1,10 +1,10 @@
 def call() 
 {
-    callGenericCommand '''
+    callGenericCommand
         echo "[Jenkins] Unity Set Product Settings stage starting..."
         echo "[Jenkins] BuildNumber: ${BUILD_NUMBER}, AppVersion: ${STORE_BUILD_VERSION}, CustomVersion: ${STORE_CUSTOM_BUNDLE_VERSION}, CustomBundleVersion: ${STORE_BUNDLE_VERSION}"
 
-        ${env.UNITY_PATH} -batchmode \
+        $UNITY_PATH -batchmode \
                     -projectPath $WORKSPACE \
                     -executeMethod $UNITY_ASSET_METHOD \
                     -username $UNITY_USERNAME \
@@ -20,5 +20,4 @@ def call()
                     -silent-crashes
                     
         echo "[Jenkins] Unity Set Product Settings stage completed!"
-    '''
 }
