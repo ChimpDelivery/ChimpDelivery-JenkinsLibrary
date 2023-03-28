@@ -3,7 +3,7 @@ def call()
     switch (env.OS)
     {
         case 'WIN':
-            return 'C:/Program Files/Unity/Hub/Editor/' + ${UNITY_VERSION} + '/Editor/Unity.exe';
+            return 'C:/Program Files/Unity/Hub/Editor/' + $UNITY_VERSION + '/Editor/Unity.exe';
         break;
         
         case 'MAC':
