@@ -6,10 +6,10 @@ def call(Map config = [:])
             bat config.script
         break;
         case 'MAC':
-            sh """${config.script}"""
+            sh config.script
         break;
         default:
-            sh """${config.script}"""
+            sh config.script
         break;
     }
 }
