@@ -3,12 +3,12 @@ def call()
     env.MULTI_LINE_SEPERATOR = getCrossMultiLine()
     
     crossShell """
-        echo '[Jenkins] Unity Set Product Settings stage starting...'
+        echo "[Jenkins] Unity Set Product Settings stage starting..."
         
-        echo '[Jenkins] BuildNumber: $BUILD_NUMBER $MULTI_LINE_SEPERATOR
+        echo "[Jenkins] BuildNumber: $BUILD_NUMBER $MULTI_LINE_SEPERATOR
                         AppVersion: $STORE_BUILD_VERSION $MULTI_LINE_SEPERATOR
                         CustomVersion: $STORE_CUSTOM_BUNDLE_VERSION $MULTI_LINE_SEPERATOR
-                        CustomBundleVersion: $STORE_BUNDLE_VERSION'
+                        CustomBundleVersion: $STORE_BUNDLE_VERSION"
 
         "${UNITY_PATH}" -batchmode $MULTI_LINE_SEPERATOR
                     -projectPath $WORKSPACE $MULTI_LINE_SEPERATOR
@@ -25,6 +25,6 @@ def call()
                     -stackTraceLogType ScriptOnly $MULTI_LINE_SEPERATOR
                     -silent-crashes
                     
-        echo '[Jenkins] Unity Set Product Settings stage completed!'
+        echo "[Jenkins] Unity Set Product Settings stage completed!"
     """        
 }
