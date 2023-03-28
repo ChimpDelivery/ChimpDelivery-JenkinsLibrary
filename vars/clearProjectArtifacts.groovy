@@ -1,6 +1,6 @@
 def call() 
 {
-    callGenericCommand '''
+    sh '''
         if [ -d "${WORKSPACE}/Builds" ]; then
             rm -rf "${WORKSPACE}/Builds"
         fi
@@ -20,7 +20,7 @@ def call()
 
     if (params.INSTALL_SDK == true)
     {
-        callGenericCommand '''
+        sh '''
             if [ -d "${WORKSPACE}/Assets/FacebookSDK" ]; then
                 rm -rf "${WORKSPACE}/Assets/FacebookSDK"
             fi
