@@ -5,9 +5,9 @@ def call()
     crossShell """
         echo '[Jenkins] Unity Set Product Settings stage starting...'
         
-        echo '[Jenkins] BuildNumber: $BUILD_NUMBER multiLineSeperator
-                        AppVersion: $STORE_BUILD_VERSION multiLineSeperator
-                        CustomVersion: $STORE_CUSTOM_BUNDLE_VERSION multiLineSeperator
+        echo '[Jenkins] BuildNumber: $BUILD_NUMBER $MULTI_LINE_SEPERATOR
+                        AppVersion: $STORE_BUILD_VERSION $MULTI_LINE_SEPERATOR
+                        CustomVersion: $STORE_CUSTOM_BUNDLE_VERSION $MULTI_LINE_SEPERATOR
                         CustomBundleVersion: $STORE_BUNDLE_VERSION'
 
         "${UNITY_PATH}" -batchmode $MULTI_LINE_SEPERATOR
