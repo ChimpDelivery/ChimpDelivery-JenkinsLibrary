@@ -9,7 +9,7 @@ def call()
                     -executeMethod "${UNITY_ASSET_METHOD}" \
                     -username "${UNITY_USERNAME}" \
                     -password "${UNITY_PASSWORD}" \
-                    -serial "${UNITY_SERIAL}" \
+                    -serial $UNITY_SERIAL \
                     -apiUrl "${DASHBOARD_ACCOUNT_USR}" \
                     -apiKey "${DASHBOARD_ACCOUNT_PSW}" \
                     -appId "${APP_ID}" \
