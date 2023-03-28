@@ -4,7 +4,7 @@ def call()
         echo "[Jenkins] Unity Set Product Settings stage starting..."
         echo "[Jenkins] BuildNumber: ${BUILD_NUMBER}, AppVersion: ${STORE_BUILD_VERSION}, CustomVersion: ${STORE_CUSTOM_BUNDLE_VERSION}, CustomBundleVersion: ${STORE_BUNDLE_VERSION}"
 
-        $UNITY_PATH -batchmode \
+        ${env.UNITY_PATH} -batchmode \
                     -projectPath $WORKSPACE \
                     -executeMethod $UNITY_ASSET_METHOD \
                     -username $UNITY_USERNAME \
