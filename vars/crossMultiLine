@@ -1,4 +1,4 @@
-def call(command) 
+def call() 
 {
     return (isUnix()) ? '\' : '^'
 }
