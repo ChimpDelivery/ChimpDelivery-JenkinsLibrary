@@ -50,7 +50,7 @@ def WindowsEscapeVarPercentage(str)
         return str;
     }
 
-    *// If we want literal %*
+    // If we want literal %*
     return str.replace("%", "%%");
 }
 
