@@ -1,11 +1,11 @@
-def call(labelStr, cmd, returnStatus = false, returnStdout = false, useWsl = false) 
+def call(String cmd, boolean returnStatus = false, boolean returnStdout = false, boolean useWsl = false) 
 {
     if (isUnix()) 
     {
-        return sh(label: labelStr, script: cmd, returnStatus: returnStatus, returnStdout: returnStdout);
+        return sh(script: cmd, returnStatus: returnStatus, returnStdout: returnStdout);
     } 
 
-    return WindowFixReturn(bat(label: labelStr, script: WindowFixCmd(cmd, useWsl), returnStatus: returnStatus, returnStdout: returnStdout), returnStdout);
+    return WindowFixReturn(bat(script: WindowFixCmd(cmd: cmd, useWsl: useWsl), returnStatus: returnStatus, returnStdout: returnStdout), returnStdout);
 }
 
 def ConsoleVar(varName) 
@@ -28,7 +28,7 @@ def WindowFixReturn(data, returnStdout)
     return data;
 }
 
-def WindowFixCmd(cmd, useWsl) 
+def WindowFixCmd(String cmd, bool useWsl) 
 {
     if (useWsl) 
     {
@@ -38,12 +38,12 @@ def WindowFixCmd(cmd, useWsl)
     return cmd;
 }
 
-def WindowsWslCommand(cmd) 
+def WindowsWslCommand(Strign cmd) 
 {
     return "wsl ${cmd}";
 }
 
-def WindowsEscapeVarPercentage(str) 
+def WindowsEscapeVarPercentage(String str) 
 {
     if (isUnix()) 
     {
