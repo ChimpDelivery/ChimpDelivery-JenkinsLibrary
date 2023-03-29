@@ -3,7 +3,7 @@ def call(Map config = [:])
     switch (env.OS)
     {
         case 'WIN':
-            return "C:/Program Files/Unity/Hub/Editor/${config.unityVersion}/Editor/Unity.exe";
+            return "C:\Program Files\Unity\Hub\Editor\" + ${config.unityVersion} + \Editor\Unity.exe";
         break;
         
         case 'MAC':
