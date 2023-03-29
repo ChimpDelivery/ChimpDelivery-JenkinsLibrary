@@ -2,7 +2,7 @@ def call(Map config = [:])
 {
     if (isUnix()) 
     {
-        return sh(script: config.cmd, returnStatus: config.returnStatus, returnStdout: config.returnStdout);
+        return sh(script: config.cmd, returnStatus: false, returnStdout: false);
     } 
 
     return windowFixReturn(bat(script: windowFixCmd(cmd: config.cmd, useWsl: config.useWsl), returnStatus: false, returnStdout: false), false);
