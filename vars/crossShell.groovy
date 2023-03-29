@@ -1,11 +1,11 @@
-def call(String cmd, boolean returnStatus = false, boolean returnStdout = false, boolean useWsl = false) 
+def call(Map config = [:]) 
 {
     if (isUnix()) 
     {
-        return sh(script: cmd, returnStatus: returnStatus, returnStdout: returnStdout);
+        return sh(script: config.cmd, returnStatus: config.returnStatus, returnStdout: config.returnStdout);
     } 
 
-    return WindowFixReturn(bat(script: WindowFixCmd(cmd: cmd, useWsl: useWsl), returnStatus: returnStatus, returnStdout: returnStdout), returnStdout);
+    return WindowFixReturn(bat(script: WindowFixCmd(cmd: config.cmd, useWsl: config.useWsl), returnStatus: config.returnStatus, returnStdout: config.returnStdout), config.returnStdout);
 }
 
 def ConsoleVar(varName) 
