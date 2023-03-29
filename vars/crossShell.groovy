@@ -2,10 +2,10 @@ def call(Map config = [:])
 {
     if (isUnix()) 
     {
-        return sh(script: config.cmd, returnStatus: false, returnStdout: false);
+        return sh(script: config.cmd, returnStatus: true, returnStdout: true);
     } 
 
-    return windowFixReturn(bat(script: windowFixCmd(cmd: config.cmd, useWsl: config.useWsl), returnStatus: false, returnStdout: false), false);
+    return windowFixReturn(bat(script: windowFixCmd(cmd: config.cmd, useWsl: config.useWsl), returnStatus: true, returnStdout: true), true);
 }
 
 def ConsoleVar(varName) 
