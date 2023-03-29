@@ -28,7 +28,7 @@ def WindowFixReturn(data, returnStdout)
     return data;
 }
 
-def WindowFixCmd(String cmd, bool useWsl) 
+def WindowFixCmd(String cmd, boolean useWsl) 
 {
     if (useWsl) 
     {
