@@ -5,7 +5,7 @@ def call(Map config = [:])
         return sh(script: config.cmd, returnStatus: config.returnStatus, returnStdout: config.returnStdout);
     } 
 
-    return WindowFixReturn(bat(script: WindowFixCmd(cmd: config.cmd, useWsl: config.useWsl), returnStatus: config.returnStatus, returnStdout: config.returnStdout), config.returnStdout);
+    return windowFixReturn(bat(script: WindowFixCmd(cmd: config.cmd, useWsl: config.useWsl), returnStatus: config.returnStatus, returnStdout: config.returnStdout), config.returnStdout);
 }
 
 def ConsoleVar(varName) 
@@ -16,16 +16,6 @@ def ConsoleVar(varName)
     } 
 
     return "%${varName}%";
-}
-
-def WindowFixReturn(data, returnStdout) 
-{
-    if (returnStdout)
-    {
-        return data.trim().readLines().drop(1).join("\n");
-    }
-
-    return data;
 }
 
 def WindowFixCmd(String cmd, boolean useWsl) 
