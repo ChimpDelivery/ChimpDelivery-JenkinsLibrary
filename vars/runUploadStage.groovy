@@ -21,18 +21,18 @@ def call()
         break
 
         case 'GooglePlay':
-            sh "echo [Jenkins] Google Play upload starting..."
+            echo "[Jenkins] Google Play upload starting..."
 
             androidApkUpload googleCredentialsId: 'GOOGLE_PLAY_KEY',
                 apkFilesPattern: 'Builds/**/*.aab',
                 trackName: 'internal',
                 rolloutPercentage: '0'
         
-           sh "echo [Jenkins] Google Play upload completed!"
+            echo "[Jenkins] Google Play upload completed!"
         break
         
         default:
-            sh "echo [Jenkins] Deliver-platform could not found!"
+            echo "[Jenkins] Deliver-platform could not found!"
         break    
     }
 }
