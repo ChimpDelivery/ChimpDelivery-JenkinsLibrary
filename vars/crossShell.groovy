@@ -38,7 +38,7 @@ def WindowFixCmd(String cmd, boolean useWsl)
     return cmd;
 }
 
-def WindowsWslCommand(Strign cmd) 
+def WindowsWslCommand(String cmd) 
 {
     return "wsl ${cmd}";
 }
