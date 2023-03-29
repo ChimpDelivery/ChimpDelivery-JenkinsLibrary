@@ -21,7 +21,7 @@ def call()
         break
 
         case 'GooglePlay':
-            sh "echo Jenkins Google Play upload starting..."
+            sh "echo [Jenkins] Google Play upload starting..."
 
             androidApkUpload googleCredentialsId: 'GOOGLE_PLAY_KEY',
                 apkFilesPattern: 'Builds/**/*.aab',
@@ -30,5 +30,9 @@ def call()
         
            sh "echo [Jenkins] Google Play upload completed!"
         break
+        
+        default:
+            sh "echo [Jenkins] Deliver-platform could not found!"
+        break    
     }
 }
