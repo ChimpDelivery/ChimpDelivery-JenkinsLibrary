@@ -1,9 +1,9 @@
-def call(String cmd, boolean useWsl) 
+def call(Map config = [:]) 
 {
-    if (useWsl) 
+    if (config.useWsl) 
     {
-        return WindowsWslCommand(cmd);
+        return WindowsWslCommand(config.cmd);
     }
 
-    return cmd;
+    return config.cmd;
 }
