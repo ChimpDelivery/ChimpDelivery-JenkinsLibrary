@@ -15,9 +15,8 @@ def ConsoleVar(varName)
         return "\${${varName}}";
     } 
 
-    return* "%${varName}%";
+    return "%${varName}%";
 }
-
 
 def WindowFixReturn(data, returnStdout) 
 {
@@ -29,7 +28,6 @@ def WindowFixReturn(data, returnStdout)
     return data;
 }
 
-
 def WindowFixCmd(cmd, useWsl) 
 {
     if (useWsl) 
@@ -40,14 +38,10 @@ def WindowFixCmd(cmd, useWsl)
     return cmd;
 }
 
- 
-
 def WindowsWslCommand(cmd) 
 {
     return "wsl ${cmd}";
 }
-
- 
 
 def WindowsEscapeVarPercentage(str) 
 {
@@ -60,7 +54,6 @@ def WindowsEscapeVarPercentage(str)
     return str.replace("%", "%%");
 }
 
-
 def ConsoleScriptExtension() 
 {
     if (isUnix()) 
@@ -70,7 +63,6 @@ def ConsoleScriptExtension()
     
     return ".bat";
 }
-
 
 def ConsoleCommandDelimiter() 
 {
