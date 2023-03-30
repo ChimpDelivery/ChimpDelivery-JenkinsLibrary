@@ -31,12 +31,12 @@ def call()
                 rmdir /s /q "%WORKSPACE%/Library/Il2cppBuildCache"
             )
 
-            # Clear the Scriptable Build Pipeline cache. Reference: https://docs.unity3d.com/Packages/com.unity.addressables@1.21/manual/ContinuousIntegration.html
+            :: Clear the Scriptable Build Pipeline cache. Reference: https://docs.unity3d.com/Packages/com.unity.addressables@1.21/manual/ContinuousIntegration.html
             if exist "%WORKSPACE%/Library/BuildCache/" (
                 rmdir /s /q "%WORKSPACE%/Library/BuildCache"
             )
 
-            # Clear Unity3D related artifacts from project history
+            :: Clear Unity3D related artifacts from project history
             git add . && git stash && git stash drop
         '''
     }
