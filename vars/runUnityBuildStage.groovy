@@ -45,7 +45,7 @@ def call()
                 -apiUrl "%DASHBOARD_ACCOUNT_USR%" ^
                 -apiKey "%$DASHBOARD_ACCOUNT_PSW%" ^
                 -appId "%APP_ID%" ^
-                -keyStorePass "%ANDROID_KEYSTORE_PASS%" ^
+                -keyStorePass "%ANDROID_KEYSTORE_PSW%" ^
                 -nographics ^
                 -accept-apiupdate ^
                 -stackTraceLogType ScriptOnly ^
