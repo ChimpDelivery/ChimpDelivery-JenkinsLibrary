@@ -23,7 +23,7 @@ def call()
         case 'GooglePlay':
             echo "[Jenkins] Google Play upload starting..."
 
-            androidApkUpload googleCredentialsId: 'GOOGLE_PLAY_KEY',
+            androidApkUpload googleCredentialsId: 'GOOGLE_SERVICE_ACCOUNT',
                 apkFilesPattern: 'Builds/**/*.aab',
                 trackName: 'internal',
                 rolloutPercentage: '0'
