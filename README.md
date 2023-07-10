@@ -1,4 +1,4 @@
-# TalusWebBackend-JenkinsLibrary
+# ChimpDelivery-JenkinsLibrary
 
 :bookmark: Jenkins Shared Library to implement pipeline logics more organized. Includes,
   - Unity3D Build/Delivery
