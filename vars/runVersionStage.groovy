@@ -9,9 +9,9 @@ def call()
             $UNITY_PATH -batchmode \
                         -projectPath $WORKSPACE \
                         -executeMethod $UNITY_ASSET_METHOD \
-                        -username $UNITY_USERNAME \
-                        -password $UNITY_PASSWORD \
-                        -serial $UNITY_SERIAL \
+                        -username $UNITY_ACCOUNT_USR \
+                        -password $UNITY_ACCOUNT_PSW \
+                        -serial $UNITY_SERIAL_PSW \
                         -apiUrl $DASHBOARD_ACCOUNT_USR \
                         -apiKey $DASHBOARD_ACCOUNT_PSW \
                         -appId $APP_ID \
@@ -33,9 +33,9 @@ def call()
             "%UNITY_PATH%" -batchmode ^
                         -projectPath "%WORKSPACE%" ^
                         -executeMethod "%UNITY_ASSET_METHOD%" ^
-                        -username "%UNITY_USERNAME%" ^
-                        -password "%UNITY_PASSWORD%" ^
-                        -serial "%UNITY_SERIAL%" ^
+                        -username "%UNITY_ACCOUNT_USR%" ^
+                        -password "%UNITY_ACCOUNT_PSW%" ^
+                        -serial "%UNITY_SERIAL_PSW%" ^
                         -apiUrl "%DASHBOARD_ACCOUNT_USR%" ^
                         -apiKey "%DASHBOARD_ACCOUNT_PSW%" ^
                         -appId "%APP_ID%" ^
